@@ -84,7 +84,7 @@ class BaselineNetwork(object):
         """
         #######################################################
         #########   YOUR CODE HERE - 1-4 lines.   ############
-        self.sess.run(self.baseline,
+        self.baseline = self.sess.run(self.baseline,
                       feed_dict={self.observation_placeholder: observations})
         adv = returns - self.baseline
 

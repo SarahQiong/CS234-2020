@@ -504,10 +504,11 @@ class PG(object):
             
             # advantage will depend on the baseline implementation
             advantages = self.calculate_advantage(returns, observations)
-
+            
             # run training operations
             if self.config.use_baseline:
                 self.baseline_network.update_baseline(returns, observations)
+
             self.sess.run(self.train_op,
                           feed_dict={
                               self.observation_placeholder: observations,
