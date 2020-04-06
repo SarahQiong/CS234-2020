@@ -3,7 +3,7 @@ import tensorflow as tf
 class config_cartpole:
     def __init__(self, use_baseline, r_seed):
         self.env_name="CartPole-v0"
-        self.record = True 
+        self.record = False 
         baseline_str = 'baseline' if use_baseline else 'no_baseline'
         seed_str = 'r_seed=' + str(r_seed)
         # output config
